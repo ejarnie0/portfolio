@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Portfolio Website by Emma Jennings",
+  title: "Portfolio Website  by Emma Jennings",
   description: "Portfolio Website created by Emma Jennings using Next.js and hosted on Vercel.",
 };
 

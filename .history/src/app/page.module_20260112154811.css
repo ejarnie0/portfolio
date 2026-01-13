@@ -69,7 +69,6 @@
   width: 100%;
 }
 
-
 .link {
   color: #000;
   font-size: 1.1rem;
@@ -81,17 +80,6 @@
 .link:hover {
   background: #000;
   color: #fff;
-}
-
-@media (prefers-color-scheme: dark) {
-  .link {
-    color: #fff;
-    border-bottom: 2px solid #fff;
-  }
-  .link:hover {
-    background: #fff;
-    color: #000;
-  }
 }
 
 @media (max-width: 600px) {
@@ -126,15 +114,4 @@
     --button-secondary-hover: #1a1a1a;
     --button-secondary-border: #1a1a1a;
   }
-    .intro h1,
-    .intro p,
-    .intro a,
-    .link {
-      color: #fff !important;
-      border-bottom: 2px solid #fff;
-    }
-    .link:hover {
-      background: #fff;
-      color: #000 !important;
-    }
 }

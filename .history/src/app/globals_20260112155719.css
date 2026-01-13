@@ -8,6 +8,7 @@
     --background: #0a0a0a;
     --foreground: #ffffff;
     color: #ffffff;
+
   }
 }
 
@@ -42,6 +43,4 @@ a {
   }
 }
 
-styles.intro {
-
-}
+styles.intro

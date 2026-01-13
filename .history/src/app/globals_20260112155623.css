@@ -8,6 +8,8 @@
     --background: #0a0a0a;
     --foreground: #ffffff;
     color: #ffffff;
+    
+
   }
 }
 
@@ -40,8 +42,4 @@ a {
   html {
     color-scheme: dark;
   }
-}
-
-styles.intro {
-
 }
