@@ -93,14 +93,12 @@
   font-size: 1.1rem;
   font-weight: 500;
   border-bottom: 2px solid #5C82B9;
-  border-radius: 20%;
-  padding: 0.1rem 0.6rem;
+  padding: 4px 12px 2px 12px;
   transition: background 0.2s, color 0.2s;
 }
 .link:hover {
-  background: var(--text-tertiary);
-  color: var(--text-primary);
-  border-radius: 20%;
+  background: #000;
+  color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -110,7 +108,7 @@
   }
   .link:hover {
     background: var(--text-tertiary);
-    color: var(--text-primary);
+    color: var();
   }
 }
 

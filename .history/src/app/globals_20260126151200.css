@@ -21,7 +21,7 @@ body {
   color: var(--foreground);
   background: var(--background) url('/crumpled_paper.jpeg') no-repeat center center fixed;
   background-size: cover;
-  font-family: AvenirNext, Arial, sans-serif;
+  font-family: Arial, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

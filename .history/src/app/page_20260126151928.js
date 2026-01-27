@@ -19,8 +19,10 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.intro}>
+          <div className={styles.links}>
           <a href="/about" className={styles.link}>About</a>
           <a href="/projects" className={styles.link}>Projects</a>
+        </div>
           <h1 style={{ 
             color: '#5C82B9', 
             fontWeight: 700, 

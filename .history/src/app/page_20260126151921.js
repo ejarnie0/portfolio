@@ -19,8 +19,6 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.intro}>
-          <a href="/about" className={styles.link}>About</a>
-          <a href="/projects" className={styles.link}>Projects</a>
           <h1 style={{ 
             color: '#5C82B9', 
             fontWeight: 700, 
@@ -50,7 +48,7 @@ export default function Home() {
           </h2>
         </div>
       </main>
-
+      
       <footer className={styles.footer}>
         <p>© 2026 Emma Jennings</p>
       </footer>

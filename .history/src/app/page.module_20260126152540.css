@@ -92,9 +92,9 @@
   color: var(--text-secondary);
   font-size: 1.1rem;
   font-weight: 500;
+  padding: 0.1rem 0.6rem;
   border-bottom: 2px solid #5C82B9;
   border-radius: 20%;
-  padding: 0.1rem 0.6rem;
   transition: background 0.2s, color 0.2s;
 }
 .link:hover {
