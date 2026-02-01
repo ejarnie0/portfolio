@@ -96,6 +96,24 @@
   gap: 4rem;
 }
 
+.description {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  font-weight: 300;
+  line-height: 1.6rem;
+  max-width: 40rem;
+  padding: 1rem;
+  background: rgba(197, 227, 255, 0.7);
+  border-radius: 1rem;
+  box-shadow: 0 12px 0 -8px rgba(27, 59, 80, 0.7);
+}
+
+.h2 {
+  color: var(--text-secondary);
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
 
 .brand {
   display: flex;
@@ -118,9 +136,9 @@
 }
 
 /* “Active page” styling */
-.linkActive {
+.link.linkActive {
   background: var(--text-tertiary);
-  color: var(--text-primary) !important;
+  color: var(--text-primary);
 }
 
 .link {
