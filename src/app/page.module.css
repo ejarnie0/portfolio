@@ -78,7 +78,8 @@
   flex-direction: row;
   justify-content: flex-end;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 3rem;
+  margin-top: -1rem;
   gap: 1rem;
 }
 
@@ -95,6 +96,33 @@
   gap: 4rem;
 }
 
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title {
+  color: #5C82B9;
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0.8rem;
+}
+
+/* Push nav to the right */
+.nav {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+/* “Active page” styling */
+.linkActive {
+  background: var(--text-tertiary);
+  color: var(--text-primary) !important;
+}
+
 .link {
   color: var(--text-secondary);
   font-size: 1.1rem;
@@ -107,6 +135,13 @@
 .link:hover {
   background: var(--text-tertiary);
   color: var(--text-primary);
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.6rem;
+    margin: 0.4rem;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

@@ -1,14 +1,23 @@
 "use client";
+import styles from "../page.module.css";
+import { useEffect, useState } from "react";
+import NavBar from "../NavBar";
+import Footer from "../footer";
 
-import React, { useState } from "react";
-import Link from "next/link";
-import styles from "./page.module.css";
 
-export default function NavBar({ title, backHref = "/dashboard" }) {
+export default function Projects() {
 
     return (
-        <div className={styles.header}>
-            <h1 className={styles.title}>Projects</h1>
+        <div className={styles.page}>
+        <NavBar></NavBar>
+
+        <main className={styles.main}>
+            <div >
+                
+            </div>
+        </main>
+
+        <Footer />
         </div>
     );
-    }
+}
