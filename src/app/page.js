@@ -3,7 +3,7 @@ import styles from "./page.module.css";
 import Footer from "./components/footer";
 
 // React Flow imports
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import {
   ReactFlow,
   applyNodeChanges,
@@ -20,7 +20,7 @@ const initialNodes = [
   {
     id: "p1",
     type: "project",
-    position: { x: 0, y: 0 },
+    position: { x: 100, y: 100 },
     data: {
       label: "Got It",
       subtitle: "Website",
@@ -31,7 +31,7 @@ const initialNodes = [
   {
     id: "p2",
     type: "project",
-    position: { x: 260, y: 80 },
+    position: { x: 360, y: 20 },
     data: {
       label: "DayBreak",
       subtitle: `Web-Browser Game`,
@@ -42,7 +42,7 @@ const initialNodes = [
   {
     id: "p3",
     type: "project",
-    position: { x: 520, y: 160 },
+    position: { x: 700, y: 20 },
     data: {
       label: `Sailing Brochure`,
       subtitle: `InDesign & Photoshop`,
@@ -53,7 +53,7 @@ const initialNodes = [
   {
     id: "p4",
     type: "project",
-    position: { x: 400, y: 240 },
+    position: { x: 20, y: 360 },
     data: {
       label: `Skiing Posters`,
       subtitle: `Illustrator & Photoshop`,
@@ -64,7 +64,7 @@ const initialNodes = [
 {
     id: "p5",
     type: "project",
-    position: { x: 380, y: 330 },
+    position: { x: 360, y: 360 },
     data: {
       label: `Realism Drawing`,
       subtitle: `Photoshop`,
@@ -95,12 +95,48 @@ export default function Home() {
     []
   );
 
+// Calculate node extent based on container size
+  const flowWrapRef = useRef(null);
+
+// Your node size (match your CSS)
+const NODE_W = 300;
+const NODE_H = 300;
+
+const [nodeExtent, setNodeExtent] = useState([[0, 0], [0, 0]]);
+
+useEffect(() => {
+  const el = flowWrapRef.current;
+  if (!el) return;
+
+  const update = () => {
+    const current = flowWrapRef.current;
+    if (!current) return;
+
+    const rect = current.getBoundingClientRect();
+    const maxX = Math.max(0, rect.width - NODE_W);
+    const maxY = Math.max(0, rect.height - NODE_H);
+    setNodeExtent([[0, 0], [maxX, maxY]]);
+  };
+
+  // wait for layout
+  requestAnimationFrame(update);
+
+  const ro = new ResizeObserver(() => requestAnimationFrame(update));
+  ro.observe(el);
+
+  return () => ro.disconnect();
+}, []);
+
+
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
         <div className={styles.description}>
           <h2 className={styles.h2}>
-            Do you think I'm cool and also goofy while keeping my professional demeanor?</h2>
+            Do you think I'm coming off as cool and also goofy 
+            while keeping my professional demeanor?
+          </h2>
           <p>
             I really hope that's coming across well!
             <br />
@@ -111,19 +147,27 @@ export default function Home() {
           </p>
         </div>
 
-
-
         <div className={styles.reactFlowContainer}>
           <h2>Double Click to Check out a Project!</h2>
-          <ReactFlow
-            nodes={nodes}
-            edges={edges}
-            nodeTypes={nodeTypes}
-            onNodesChange={onNodesChange}
-            onEdgesChange={onEdgesChange}
-            onConnect={onConnect}
-            fitView
-          />
+          <div ref={flowWrapRef} className={styles.flowStage}>
+            <ReactFlow
+              nodes={nodes}
+              edges={edges}
+              nodeTypes={nodeTypes}
+              onNodesChange={onNodesChange}
+              onEdgesChange={onEdgesChange}
+              onConnect={onConnect}
+              defaultViewport={{ x: 0, y: 0, zoom: 1 }}
+              panOnDrag={false}
+              panOnScroll={false}
+              zoomOnScroll={false}
+              zoomOnPinch={false}
+              zoomOnDoubleClick={false}
+              autoPanOnNodeDrag={false}
+              preventScrolling={false}
+              // nodeExtent={nodeExtent} -- disable for free movement
+            />
+          </div>
         </div>
       </main>
 

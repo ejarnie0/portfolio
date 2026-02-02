@@ -153,16 +153,33 @@
 }
 
 .reactFlowContainer {
+  display: flex;
+  flex-direction: column;
   align-self: center;
   width: 90vw;
-  height: 40rem;
-  border-radius: 2rem;
-  border-width: 2px; 
-  border-color: var(--text-darkblue); 
-  border-style: solid; 
+  height: 40rem;  /* keep this */
+  border: 2px solid var(--text-darkblue);
   border-radius: 1rem;
   overflow: hidden;
 }
+
+
+.flowStage {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  position: relative; /* important for ReactFlow internals */
+}
+
+/* Force the library root to fill the stage */
+.flowStage :global(.react-flow) {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
 
 @media (max-width: 600px) {
   .title {

@@ -93,7 +93,7 @@ export default function RouteLoader() {
         {/* Button only on home; remove condition if you want everywhere */}
         {pathname === "/" && (
             <button className={styles.soundButton} onClick={toggleSound}>
-            {soundEnabledUI ? "Sound: On!" : "Sound: Off :("}
+            {soundEnabledUI ? "Sound On!" : "Sound Off :("}
             </button>
         )}
         </>
