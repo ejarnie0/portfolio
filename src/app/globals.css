@@ -1,4 +1,16 @@
 :root {
+  --background: #fafafa;
+  --foreground: #fff;
+  
+  --text-primary: #ffffff;
+  --text-secondary: #5C82B9;
+  --text-tertiary: #92B9EB;
+  --text-other: #FFC600;
+  --text-darkblue: #4e62b3;
+  
+  --button-primary-hover: #5C82B9;
+  --button-secondary-hover: #92B9EB;
+  --button-secondary-border: #ebebeb;
   --background: #5C82B9;
   --foreground: #FFFFFF;
 }

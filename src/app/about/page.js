@@ -2,7 +2,6 @@
 
 import styles from "../page.module.css";
 import { useEffect, useState } from "react";
-import NavBar from "../NavBar";
 import Footer from "../footer";
 
 
@@ -20,7 +19,6 @@ export default function About() {
 
     return (
         <div className={styles.page}>
-        <NavBar></NavBar>
 
         <main className={styles.main}>
             <div >

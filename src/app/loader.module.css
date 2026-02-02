@@ -1,0 +1,40 @@
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+
+    /* allow the button to still be clickable */
+    pointer-events: none;
+}
+
+.video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.fadeOut {
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+
+/* Bottom-left, stays after loader hides */
+.soundButton {
+    position: fixed;
+    bottom: 24px;
+    left: 24px;
+    z-index: 10000;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    background-color: var(--text-primary);
+
+    pointer-events: auto; /* IMPORTANT */
+}
