@@ -13,6 +13,7 @@ import {
 import "@xyflow/react/dist/style.css";
 
 import ProjectNode from "./components/ProjectNode";
+import { Tooltip } from "@mui/material";
 
 const nodeTypes = { project: ProjectNode };
 
@@ -26,6 +27,7 @@ const initialNodes = [
       subtitle: "Website",
       bgUrl: "/paper1.png",
       href: "/projects", // change url later!!
+      iconUrl: "/icons/gotit.png", // change url later!!
     },
   },
   {
@@ -37,6 +39,7 @@ const initialNodes = [
       subtitle: `Web-Browser Game`,
       bgUrl: "/paper2.png",
       href: "/projects", // change url later!!
+      iconUrl: "/icons/gotit.png", // change url later!!
     },
   },
   {
@@ -48,6 +51,7 @@ const initialNodes = [
       subtitle: `InDesign & Photoshop`,
       bgUrl: "/paper3.png",
       href: "/projects", // change url later!!
+      iconUrl: "/icons/gotit.png", // change url later!!
     },
   },
   {
@@ -59,6 +63,7 @@ const initialNodes = [
       subtitle: `Illustrator & Photoshop`,
       bgUrl: "/paper2.png",
       href: "/projects", // change url later!!
+      iconUrl: "/icons/gotit.png", // change url later!!
     },
   },
 {
@@ -70,6 +75,7 @@ const initialNodes = [
       subtitle: `Photoshop`,
       bgUrl: "/paper3.png",
       href: "/projects", // change url later!!
+      iconUrl: "/icons/gotit.png", // change url later!!
     },
   },
 ];
@@ -148,26 +154,53 @@ useEffect(() => {
         </div>
 
         <div className={styles.reactFlowContainer}>
-          <h2>Double Click to Check out a Project!</h2>
-          <div ref={flowWrapRef} className={styles.flowStage}>
-            <ReactFlow
-              nodes={nodes}
-              edges={edges}
-              nodeTypes={nodeTypes}
-              onNodesChange={onNodesChange}
-              onEdgesChange={onEdgesChange}
-              onConnect={onConnect}
-              defaultViewport={{ x: 0, y: 0, zoom: 1 }}
-              panOnDrag={false}
-              panOnScroll={false}
-              zoomOnScroll={false}
-              zoomOnPinch={false}
-              zoomOnDoubleClick={false}
-              autoPanOnNodeDrag={false}
-              preventScrolling={false}
-              // nodeExtent={nodeExtent} -- disable for free movement
-            />
-          </div>
+          <h2>Check out some of my work!</h2>
+            <Tooltip
+              title="Try Rearranging Things!"
+              arrow
+              placement="top-end"
+              enterDelay={250}
+              componentsProps={{
+                tooltip: {
+                  sx: {
+                    backgroundColor: "rgba(92, 130, 185, 0.95)", // or your color
+                    color: "#fff",
+                    fontSize: "1rem",
+                    fontWeight: 600,
+                    padding: "0.5rem 0.75rem",
+                    borderRadius: "0.7rem",
+                    border: "2px solid rgba(45, 88, 114, 0.35)",
+                    boxShadow: "0 10px 20px rgba(45, 88, 114, 0.25)",
+                  },
+                },
+                arrow: {
+                  sx: {
+                    color: "rgba(92, 130, 185, 0.95)",
+                  },
+                },
+              }}
+            >
+          
+              <div ref={flowWrapRef} className={styles.flowStage}>
+                <ReactFlow
+                  nodes={nodes}
+                  edges={edges}
+                  nodeTypes={nodeTypes}
+                  onNodesChange={onNodesChange}
+                  onEdgesChange={onEdgesChange}
+                  onConnect={onConnect}
+                  defaultViewport={{ x: 0, y: 0, zoom: 1 }}
+                  panOnDrag={false}
+                  panOnScroll={false}
+                  zoomOnScroll={false}
+                  zoomOnPinch={false}
+                  zoomOnDoubleClick={false}
+                  autoPanOnNodeDrag={false}
+                  preventScrolling={false}
+                  // nodeExtent={nodeExtent} -- disable for free movement
+                />
+            </div>
+          </Tooltip>
         </div>
       </main>
 

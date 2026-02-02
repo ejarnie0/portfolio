@@ -1,8 +1,6 @@
 .node {
-    width: 300px;
+    width: 400px;
     height: 300px;
-    border-radius: 16px;
-    /* overflow: hidden; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,7 +12,7 @@
 /* label overlay at bottom */
 .label {
     width: 100%;
-    padding: 0 0 0 25px;
+    padding: 0 0 0 50px;
     font-size: 1.75rem;
     font-weight: 600;
     color: var(--text-darkblue);
@@ -23,7 +21,36 @@
 
 .subtitle {
     color: var(--text-darkblue);
-    padding: 0 0 140px 25px;
+    padding: 0 0 110px 50px;
     font-size: 1rem;
     line-height: 1.1;
+}
+
+.subtitle a {
+    color: inherit;            /* or a specific link color */
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.subtitle a:hover {
+    opacity: 0.85;
+}
+
+
+/* Image CSS */
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    /* border-radius: 0.5rem; */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.18);
 }

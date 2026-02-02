@@ -145,7 +145,7 @@
 
 .reactFlowContainer h2 {
   color: var(--text-darkblue);
-  font-size: 1.5rem;
+  font-size: 3rem;
   font-weight: 700;
   text-align: left;
   margin: 1rem;
@@ -157,15 +157,9 @@
   align-self: center;
   width: 80vw;
   height: 40rem;  /* keep this */
-  border: 2px solid var(--text-darkblue);
+  /* border: 2px solid var(--text-darkblue); */
   border-radius: 1rem;
   overflow: hidden;
-}
-
-@media screen and (max-width: 3000px) {
-  .reactFlowContainer {
-    width: 1000px;
-  }
 }
 
 .flowStage {
@@ -184,6 +178,11 @@
 
 
 
+@media screen and (max-width: 3000px) {
+  .reactFlowContainer {
+    width: 90vw;
+  }
+}
 
 @media (max-width: 600px) {
   .title {
