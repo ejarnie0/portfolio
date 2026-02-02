@@ -8,17 +8,12 @@ export default function RouteLoader() {
     const pathname = usePathname();
     const videoRef = useRef(null);
 
-    // Use a ref so changing sound doesn't trigger the route effect
     const soundEnabledRef = useRef(false);
+    const [soundEnabledUI, setSoundEnabledUI] = useState(false);
 
     const [show, setShow] = useState(false);
     const [fade, setFade] = useState(false);
 
-    // Just for button text/UI
-    const [soundEnabledUI, setSoundEnabledUI] = useState(false);
-    const [soundBlocked, setSoundBlocked] = useState(false);
-
-    // Load saved sound preference once
     useEffect(() => {
         const saved = localStorage.getItem("soundEnabled") === "true";
         soundEnabledRef.current = saved;
@@ -30,51 +25,37 @@ export default function RouteLoader() {
         setTimeout(() => setShow(false), 400);
     };
 
-    // ✅ Only run loader on route changes (NOT on sound toggle)
+    // Show loader on every route change
     useEffect(() => {
         setShow(true);
         setFade(false);
-        setSoundBlocked(false);
 
+        // reset video state when it mounts
+        const t = setTimeout(() => {
         const v = videoRef.current;
-        if (!v) {
-        hide();
-        return;
-        }
-
-        // Reset and set mute based on preference *at the moment of navigation*
+        if (!v) return;
         v.currentTime = 0;
         v.volume = 1;
         v.muted = !soundEnabledRef.current;
+        }, 0);
 
-        const p = v.play();
-        if (p?.catch) {
-        p.catch(async () => {
-            // If sound was enabled but blocked, fall back to muted
-            if (soundEnabledRef.current) {
-            setSoundBlocked(true);
-            try {
-                v.muted = true;
-                await v.play();
-            } catch {
-                hide();
-            }
-            } else {
-            hide();
-            }
-        });
-        }
-
+        // fallback so it never gets stuck
         const fallback = setTimeout(hide, 2000);
-        return () => clearTimeout(fallback);
+
+        return () => {
+        clearTimeout(t);
+        clearTimeout(fallback);
+        };
     }, [pathname]);
 
-    // ✅ Toggle only changes preference; does NOT replay the video
     const toggleSound = async () => {
         const next = !soundEnabledRef.current;
 
+        // turning OFF: instantly mute current video to avoid any blip
+        if (!next && videoRef.current) videoRef.current.muted = true;
+
+        // turning ON: user gesture “unlocks” audio for future plays
         if (next) {
-        // User gesture "unlocks" audio for future plays
         try {
             const AudioContext = window.AudioContext || window.webkitAudioContext;
             if (AudioContext) {
@@ -82,18 +63,12 @@ export default function RouteLoader() {
             await ctx.resume();
             await ctx.close();
             }
-        } catch {
-            // ignore
-        }
-        } else {
-        // Turning sound OFF: immediately mute any currently playing loader video
-        if (videoRef.current) videoRef.current.muted = true;
+        } catch {}
         }
 
         soundEnabledRef.current = next;
         localStorage.setItem("soundEnabled", String(next));
         setSoundEnabledUI(next);
-        setSoundBlocked(false);
     };
 
     return (
@@ -101,24 +76,24 @@ export default function RouteLoader() {
         {show && (
             <div className={`${styles.overlay} ${fade ? styles.fadeOut : ""}`}>
             <video
-                key={pathname}
+                key={pathname}                 // remount every route
                 ref={videoRef}
                 className={styles.video}
                 src="/loading.mp4"
                 autoPlay
                 playsInline
                 preload="auto"
+                muted={!soundEnabledRef.current}
                 onEnded={hide}
                 onError={hide}
             />
             </div>
         )}
 
-        {/* Bottom-left toggle ONLY on home */}
+        {/* Button only on home; remove condition if you want everywhere */}
         {pathname === "/" && (
             <button className={styles.soundButton} onClick={toggleSound}>
             {soundEnabledUI ? "Sound: On!" : "Sound: Off :("}
-            {soundBlocked ? " (tap)" : ""}
             </button>
         )}
         </>

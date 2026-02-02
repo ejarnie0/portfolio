@@ -2,7 +2,7 @@
 
 import styles from "../page.module.css";
 import { useEffect, useState } from "react";
-import Footer from "../footer";
+import Footer from "../components/footer";
 
 
 export default function About() {

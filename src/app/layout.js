@@ -1,8 +1,8 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-// import RouteLoader from "./RouteLoader";
-import RouteLoader from "./routeLoader";
-import NavBar from "./NavBar";
+import RouteLoader from "./components/routeLoader";
+import NavBar from "./components/NavBar";
+import styles from "./page.module.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,9 +23,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <NavBar />
+      <body className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
         <RouteLoader />
+        <NavBar />
         {children}
       </body>
     </html>
