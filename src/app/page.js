@@ -134,7 +134,7 @@ useEffect(() => {
       <main className={styles.main}>
         <div className={styles.description}>
           <h2 className={styles.h2}>
-            Do you think I'm coming off as cool and also goofy 
+            Do you think I'm coming off as cool and goofy 
             while keeping my professional demeanor?
           </h2>
           <p>
