@@ -1,8 +1,11 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import styles from "./page.module.css";
+
 import RouteLoader from "./components/routeLoader";
 import NavBar from "./components/NavBar";
-import styles from "./page.module.css";
+import ClickSpark from "./components/clickSpark";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,10 +27,14 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
-        <RouteLoader />
-        <NavBar />
-        {children}
+        <ClickSpark sparkSize={20} sparkColor="#3f538d" sparkCount={7}>
+          <RouteLoader />
+          <NavBar />
+          {children}
+        </ClickSpark>
       </body>
     </html>
   );
 }
+
+

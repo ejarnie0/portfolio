@@ -35,15 +35,20 @@ export default function NavBar() {
     // Change this default title to whatever you want on the home page (/)
     const pageTitle = activeItem?.title ?? "Hi there, I'm Emma!";
 
+    <div className={styles.logoWrap}>
+  <img src="/emma_logo.png" className={styles.logo} alt="Emma Jennings Logo" />
+</div>
     return (
         <header className={styles.header}>
         <div className={styles.brand}>
-            <img
-            src="/emma_logo.png"
-            alt="Emma Jennings Logo"
-            className={styles.logo}
-            height="80"
-            />
+            <div className={styles.logoWrap}>
+                <img
+                src="/emma_logo.png"
+                alt="Emma Jennings Logo"
+                className={styles.logo}
+                height="80"
+                />
+            </div>
             <h1 className={styles.title}>{pageTitle}</h1>
         </div>
 

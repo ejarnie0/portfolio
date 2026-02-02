@@ -153,7 +153,7 @@ useEffect(() => {
           </p>
         </div>
 
-        <div className={styles.reactFlowContainer}>
+        <div className={styles.reactFlowContainer} data-no-spark>
           <h2>Check out some of my work!</h2>
             <Tooltip
               title="Try Rearranging Things!"
