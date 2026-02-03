@@ -1,4 +1,5 @@
 "use client";
+import Image from 'next/image'
 import styles from "./page.module.css";
 import Footer from "./components/footer";
 
@@ -15,13 +16,18 @@ import "@xyflow/react/dist/style.css";
 import ProjectNode from "./components/ProjectNode";
 import { Tooltip } from "@mui/material";
 
-const nodeTypes = { project: ProjectNode };
+import IconNode from "./components/IconNode";
+
+const nodeTypes = {
+  project: ProjectNode,
+  icon: IconNode,
+};
 
 const initialNodes = [
   {
     id: "p1",
     type: "project",
-    position: { x: 100, y: 100 },
+    position: { x: 100, y: 70 },
     data: {
       label: "Got It",
       subtitle: "Website",
@@ -33,7 +39,7 @@ const initialNodes = [
   {
     id: "p2",
     type: "project",
-    position: { x: 360, y: 20 },
+    position: { x: 520, y: 50 },
     data: {
       label: "DayBreak",
       subtitle: `Web-Browser Game`,
@@ -45,7 +51,7 @@ const initialNodes = [
   {
     id: "p3",
     type: "project",
-    position: { x: 700, y: 20 },
+    position: { x: 900, y: 70 },
     data: {
       label: `Sailing Brochure`,
       subtitle: `InDesign & Photoshop`,
@@ -57,7 +63,7 @@ const initialNodes = [
   {
     id: "p4",
     type: "project",
-    position: { x: 20, y: 360 },
+    position: { x: 100, y: 300 },
     data: {
       label: `Skiing Posters`,
       subtitle: `Illustrator & Photoshop`,
@@ -69,13 +75,53 @@ const initialNodes = [
 {
     id: "p5",
     type: "project",
-    position: { x: 360, y: 360 },
+    position: { x: 500, y: 300 },
     data: {
       label: `Realism Drawing`,
       subtitle: `Photoshop`,
       bgUrl: "/paper3.png",
       href: "/projects", // change url later!!
       iconUrl: "/icons/gotit.png", // change url later!!
+    },
+  },
+  {
+    id: "p6",
+    type: "icon",
+    position: { x: 60, y: 600 },
+    data: {
+      iconUrl: "/yellow_line.png",
+    },
+  },
+  {
+    id: "p7",
+    type: "icon",
+    position: { x: 60, y: 600 },
+    data: {
+      iconUrl: "/blue_x.png",
+    },
+  },
+  {
+    id: "p8",
+    type: "icon",
+    position: { x: 40, y: -170 },
+    data: {
+      iconUrl: "/star2.png",
+    },
+  },
+  {
+    id: "p9",
+    type: "icon",
+    position: { x: 80, y: -170 },
+    data: {
+      iconUrl: "/light_blue_line.png",
+    },
+  },
+  {
+    id: "p10",
+    type: "icon",
+    position: { x: 60, y: -170 },
+    data: {
+      iconUrl: "/blueberry.png",
     },
   },
 ];
@@ -152,6 +198,95 @@ useEffect(() => {
             it a part of ourselves.
           </p>
         </div>
+        
+        <Image
+            src="/orange2.png"
+            width={250}
+            height={250}
+            alt="Orange Illustration"
+            style={{
+              position: "absolute",
+              top: "-2rem",
+              right: "7rem",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/blueberry.png"
+            width={80}
+            height={80}
+            alt="Blueberry Illustration"
+            style={{
+              position: "absolute",
+              top: "7.5rem",
+              right: "17rem",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/star2.png"
+            width={60}
+            height={60}
+            alt="Blueberry Illustration"
+            style={{
+              position: "absolute",
+              top: "24rem",
+              right: "10rem",
+              transform: "rotate(10deg)",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/star2.png"
+            width={60}
+            height={60}
+            alt="Star Illustration"
+            style={{
+              position: "absolute",
+              top: "18rem",
+              right: "38rem",
+              transform: "rotate(-15deg)",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/star1.png"
+            width={90}
+            height={90}
+            alt="Star Illustration"
+            style={{
+              position: "absolute",
+              top: "1rem",
+              right: "52rem",
+              transform: "rotate(-20deg)",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/red_heart.png"
+            width={200}
+            height={200}
+            alt="Red Heart Illustration"
+            style={{
+              position: "absolute",
+              top: "20rem",
+              right: "41rem",
+              zIndex: 2,
+            }}
+          />
+          <Image
+            src="/blue_heart.png"
+            width={150}
+            height={150}
+            alt="Blue Heart Illustration"
+            style={{
+              position: "absolute",
+              top: "18rem",
+              right: "12rem",
+              zIndex: 2,
+            }}
+          />
+
 
         <div className={styles.reactFlowContainer} data-no-spark>
           <h2>Check out some of my work!</h2>

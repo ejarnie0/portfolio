@@ -29,6 +29,16 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   background-color: rgba(255, 224, 69, 0.9);
+
+  cursor: url("/pointer.png") 16 16, auto; 
+}
+
+a, button, [role="button"], .clickable {
+  cursor: url("/pointer.png") 16 16, pointer;
+}
+
+input, textarea {
+  cursor: text;
 }
 
 body {
