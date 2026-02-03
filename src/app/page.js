@@ -119,7 +119,8 @@ const initialNodes = [
   {
     id: "p10",
     type: "icon",
-    position: { x: 60, y: -170 },
+    origin: [0.5, 0.5],
+    position: { x: 200, y: 80 },
     data: {
       iconUrl: "/blueberry.png",
     },
@@ -198,95 +199,100 @@ useEffect(() => {
             it a part of ourselves.
           </p>
         </div>
-        
-        <Image
-            src="/orange2.png"
-            width={250}
-            height={250}
-            alt="Orange Illustration"
-            style={{
-              position: "absolute",
-              top: "-2rem",
-              right: "7rem",
-              zIndex: 2,
-            }}
-          />
+        <div className={styles.stickersLarge}>
           <Image
-            src="/blueberry.png"
-            width={80}
-            height={80}
-            alt="Blueberry Illustration"
-            style={{
-              position: "absolute",
-              top: "7.5rem",
-              right: "17rem",
-              zIndex: 2,
-            }}
-          />
+              src="/star1.png"
+              width={90}
+              height={90}
+              alt="Star Illustration"
+              style={{
+                position: "absolute",
+                top: "1rem",
+                right: "52rem",
+                transform: "rotate(-20deg)",
+                zIndex: 2,
+              }}
+            />
+        </div>
+        <div className={styles.stickersMedium}>
           <Image
-            src="/star2.png"
-            width={60}
-            height={60}
-            alt="Blueberry Illustration"
-            style={{
-              position: "absolute",
-              top: "24rem",
-              right: "10rem",
-              transform: "rotate(10deg)",
-              zIndex: 2,
-            }}
-          />
-          <Image
-            src="/star2.png"
-            width={60}
-            height={60}
-            alt="Star Illustration"
-            style={{
-              position: "absolute",
-              top: "18rem",
-              right: "38rem",
-              transform: "rotate(-15deg)",
-              zIndex: 2,
-            }}
-          />
-          <Image
-            src="/star1.png"
-            width={90}
-            height={90}
-            alt="Star Illustration"
-            style={{
-              position: "absolute",
-              top: "1rem",
-              right: "52rem",
-              transform: "rotate(-20deg)",
-              zIndex: 2,
-            }}
-          />
-          <Image
-            src="/red_heart.png"
-            width={200}
-            height={200}
-            alt="Red Heart Illustration"
-            style={{
-              position: "absolute",
-              top: "20rem",
-              right: "41rem",
-              zIndex: 2,
-            }}
-          />
-          <Image
-            src="/blue_heart.png"
-            width={150}
-            height={150}
-            alt="Blue Heart Illustration"
-            style={{
-              position: "absolute",
-              top: "18rem",
-              right: "12rem",
-              zIndex: 2,
-            }}
-          />
-
+              src="/orange2.png"
+              width={250}
+              height={250}
+              alt="Orange Illustration"
+              style={{
+                position: "absolute",
+                top: "-2rem",
+                right: "7rem",
+                zIndex: 2,
+              }}
+            />
+            <Image
+              src="/blueberry.png"
+              width={80}
+              height={80}
+              alt="Blueberry Illustration"
+              style={{
+                position: "absolute",
+                top: "7.5rem",
+                right: "17rem",
+                zIndex: 2,
+              }}
+            />
+        </div>
+        <div className={styles.stickersMedium}>
+            <Image
+              src="/star2.png"
+              width={60}
+              height={60}
+              alt="Blueberry Illustration"
+              style={{
+                position: "absolute",
+                top: "24rem",
+                right: "10rem",
+                transform: "rotate(10deg)",
+                zIndex: 2,
+              }}
+            />
+            <Image
+              src="/star2.png"
+              width={60}
+              height={60}
+              alt="Star Illustration"
+              style={{
+                position: "absolute",
+                top: "18rem",
+                right: "38rem",
+                transform: "rotate(-15deg)",
+                zIndex: 2,
+              }}
+            />
+            
+            <Image
+              src="/red_heart.png"
+              width={200}
+              height={200}
+              alt="Red Heart Illustration"
+              style={{
+                position: "absolute",
+                top: "20rem",
+                right: "41rem",
+                zIndex: 2,
+              }}
+            />
+            <Image
+              src="/blue_heart.png"
+              width={150}
+              height={150}
+              alt="Blue Heart Illustration"
+              style={{
+                position: "absolute",
+                top: "18rem",
+                right: "12rem",
+                zIndex: 2,
+              }}
+            />
+          </div>
 
         <div className={styles.reactFlowContainer} data-no-spark>
           <h2>Check out some of my work!</h2>
