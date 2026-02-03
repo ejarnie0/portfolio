@@ -87,7 +87,7 @@ const initialNodes = [
   {
     id: "p6",
     type: "icon",
-    position: { x: 60, y: 600 },
+    position: { x: 940, y: 75 },
     data: {
       iconUrl: "/yellow_line.png",
     },
@@ -95,7 +95,7 @@ const initialNodes = [
   {
     id: "p7",
     type: "icon",
-    position: { x: 60, y: 600 },
+    position: { x: 400, y: 340 },
     data: {
       iconUrl: "/blue_x.png",
     },
@@ -103,7 +103,7 @@ const initialNodes = [
   {
     id: "p8",
     type: "icon",
-    position: { x: 40, y: -170 },
+    position: { x: 700, y: 300 },
     data: {
       iconUrl: "/star2.png",
     },
@@ -111,7 +111,7 @@ const initialNodes = [
   {
     id: "p9",
     type: "icon",
-    position: { x: 80, y: -170 },
+    position: { x: 100, y: 65 },
     data: {
       iconUrl: "/light_blue_line.png",
     },
@@ -120,7 +120,7 @@ const initialNodes = [
     id: "p10",
     type: "icon",
     origin: [0.5, 0.5],
-    position: { x: 200, y: 80 },
+    position: { x: 700, y: 70 },
     data: {
       iconUrl: "/blueberry.png",
     },
@@ -239,8 +239,6 @@ useEffect(() => {
                 zIndex: 2,
               }}
             />
-        </div>
-        <div className={styles.stickersMedium}>
             <Image
               src="/star2.png"
               width={60}
@@ -267,7 +265,6 @@ useEffect(() => {
                 zIndex: 2,
               }}
             />
-            
             <Image
               src="/red_heart.png"
               width={200}

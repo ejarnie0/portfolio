@@ -86,7 +86,7 @@ export default function CardNav({
                 className={styles.logo}
                 priority
                 />
-                <span className={styles.brandText}>Menu</span>
+                <span className={styles.brandText}>Hi, I'm Emma!</span>
             </div>
 
             <button
