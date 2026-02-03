@@ -136,6 +136,23 @@
   100% { transform: rotate(0deg); }
 }
 
+.stickerWrap {
+  position: absolute;
+  transform-origin: 50% 50%;
+  pointer-events: auto; /* ✅ so hover works even if parent is none */
+}
+
+.sticker {
+  display: block;
+  transform-origin: 50% 50%;
+}
+
+.stickerWrap:hover .sticker {
+  animation: logoWiggle 0.8s ease-in-out 1;
+}
+
+
+
 /* Push nav to the right */
 .nav {
   display: flex;
@@ -194,6 +211,14 @@
 
 
 /* Main Page Stickers */
+.stickersLarge,
+.stickersMedium {
+  position: absolute;
+  inset: 0; 
+  pointer-events: none;
+  z-index: 2;
+}
+
 @media screen and (max-width: 1657px) {
   .stickersLarge {
     visibility: hidden;
@@ -201,15 +226,20 @@
 }
 
 /* Hiding header when small */
-@media screen and (max-width: 1125px) {
+@media screen and (max-width: 1200px) {
   .stickersMedium {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 1125px) {
+  .stickersSmall {
     visibility: hidden;
   }
   .header {
     visibility: hidden;
   }
 }
-
 
 
 
