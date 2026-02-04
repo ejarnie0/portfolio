@@ -140,10 +140,15 @@
 }
 
 .buttonSecondary {
+    color: #7894ba;
     font-size: 0.85rem;
     font-weight: 600;
     padding: 0.5rem 0.8rem;
     background: transparent;
+}
+
+.buttonSecondary:hover {
+    pointer: grabber;
 }
 
 /* Mobile */
