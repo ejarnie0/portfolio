@@ -1,21 +1,26 @@
 "use client";
 
+import Link from "next/link";
 import Image from "next/image";
 import styles from "./project.module.css";
+
 
 
 const PROJECTS = [
     {
         id: "p1",
+        slug: "got-it",
         title: "Got It",
         subtitle: "Website",
-        image: "/projects/gotit.png", // put your image in /public/projects/
-        alt: "Got It project screenshot",
+        liveUrl: "https://got-it-phi.vercel.app/",
+        image: "/projects/gotit.png", // put your images in /public/projects/
+        alt: "Got It logo",
         description:
         "A short paragraph about what this project is, what you built, and what you’re proud of. Mention tools/skills, goals, and one standout feature.",
     },
     {
         id: "p2",
+        slug: "daybreak",
         title: "DayBreak",
         subtitle: "Web Browser Game",
         image: "/projects/daybreak.png",
@@ -25,6 +30,7 @@ const PROJECTS = [
     },
     {
         id: "p3",
+        slug: "sailing-brochure",
         title: "Sailing Brochure",
         subtitle: "InDesign & Photoshop",
         image: "/projects/sailing.png",
@@ -34,6 +40,7 @@ const PROJECTS = [
     },
     {
         id: "p4",
+        slug: "skiing-posters",
         title: "Skiing Posters",
         subtitle: "Illustrator & Photoshop",
         image: "/projects/skiing.png",
@@ -43,6 +50,7 @@ const PROJECTS = [
     },
     {
         id: "p5",
+        slug: "realism-drawing",
         title: "Realism Drawing",
         subtitle: "Photoshop",
         image: "/projects/realism.png",
@@ -52,12 +60,13 @@ const PROJECTS = [
     },
     {
         id: "p6",
-        title: "Project Six",
-        subtitle: "Subtitle goes here",
+        slug: "deer-video",
+        title: "A Doe In a Field",
+        subtitle: "After Effects",
         image: "/projects/project6.png",
         alt: "Project six preview",
         description:
-        "Placeholder copy. Replace with your project story: goal → process → result. Keep it 2–5 sentences for readability.",
+        "Maybe delete this one.",
     },
 ];
 
@@ -66,7 +75,7 @@ export default function ProjectsPage() {
         <main className={styles.page}>
         <header className={styles.header}>
             <h2 className={styles.subtitle}>
-            A few things I’ve designed and built. Click into any project later if you want
+            A few things I've designed and built. Click into any project later if you want
             to add detail pages.
             </h2>
         </header>
@@ -97,14 +106,20 @@ export default function ProjectsPage() {
                     <h2 className={styles.cardTitle}>{p.title}</h2>
                     <p className={styles.description}>{p.description}</p>
 
-                    {/* Optional buttons you can wire up later */}
                     <div className={styles.actions}>
-                    <button className={styles.button} type="button">
-                        View details
-                    </button>
-                    <button className={styles.buttonSecondary} type="button">
-                        Live link
-                    </button>
+                        <Link className={styles.button} href={`/projects/${p.slug}`}>
+                            Go To Project
+                        </Link>
+                        {p.liveUrl && (
+                            <a
+                                className={styles.buttonSecondary}
+                                href={p.liveUrl}
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Live link
+                            </a>
+                            )}
                     </div>
                 </div>
                 </article>

@@ -18,7 +18,7 @@
     line-height: 1.2;
     color: var(--text-secondary);
     font-weight:400;
-    margin: 0;
+    margin-top: -40;
 }
 
 .grid {
@@ -117,22 +117,32 @@
 
 .actions {
     display: flex;
-    gap: 0.75rem;
-    margin-top: 0.5rem;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between; /* left + right */
+    gap: 1rem;
+    width: 100%;
 }
 
 .button,
 .buttonSecondary {
     border: 2px solid rgba(45, 88, 114, 0.25);
     border-radius: 0.85rem;
-    padding: 0.55rem 0.9rem;
+    padding: 1rem 0.8rem;
     font-weight: 800;
     cursor: pointer;
     background: rgba(255, 255, 255, 0.65);
     color: var(--text-darkblue);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttonSecondary {
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
     background: transparent;
 }
 
