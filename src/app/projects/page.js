@@ -9,7 +9,7 @@ export default function Projects() {
     return (
         <div className={styles.page}>
         <main className={styles.main}>
-            <div >
+            <div>
                 
             </div>
         </main>

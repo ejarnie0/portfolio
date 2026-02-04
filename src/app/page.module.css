@@ -239,10 +239,10 @@
   .header {
     visibility: hidden;
   }
+}
 
-  .phoneProjects {
-    display: none;
-  }
+.phoneProjects {
+  display: none;
 }
 
 /* Phone Screen Size */
