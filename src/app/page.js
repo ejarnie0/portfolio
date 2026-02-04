@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image'
 import styles from "./page.module.css";
-import Footer from "./components/footer";
+import Link from 'next/link';
 
 // React Flow imports
 import { useState, useCallback, useEffect, useRef } from "react";
@@ -326,8 +326,8 @@ useEffect(() => {
                   },
                 },
               }}
-            >
-          
+              >
+
               <div ref={flowWrapRef} className={styles.flowStage}>
                 <ReactFlow
                   nodes={nodes}
@@ -345,13 +345,48 @@ useEffect(() => {
                   autoPanOnNodeDrag={false}
                   preventScrolling={false}
                   // nodeExtent={nodeExtent} -- disable for free movement
-                />
+                  />
             </div>
           </Tooltip>
         </div>
-      </main>
 
-      <Footer />
+        <div className={styles.phoneProjects}>
+          <div className={styles.description}>
+            <Link href={"/projects"}>
+              <h2 className={styles.h2}>
+                Check out my Projects <span style={{ color:"var(--text-tertiary)" }}>here!</span>
+              </h2>
+            </Link>
+              <Image
+                src="/orange2.png"
+                width={250}
+                height={250}
+                alt="Orange Illustration"
+                style={{
+                  position: "absolute",
+                  top: "32.5rem",
+                  right: "1rem",
+                  zIndex: 2,
+                }}
+              />
+              <Image
+                src="/star2.png"
+                width={60}
+                height={60}
+                alt="Star Illustration"
+                style={{
+                  position: "absolute",
+                  top: "27rem",
+                  right: "31rem",
+                  transform: "rotate(-15deg)",
+                  zIndex: 2,
+                }}
+              />
+          </div>
+        </div>
+        
+
+      </main>
     </div>
   );
 }

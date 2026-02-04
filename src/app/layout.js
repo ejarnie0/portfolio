@@ -5,7 +5,7 @@ import styles from "./page.module.css";
 import RouteLoader from "./components/routeLoader";
 import NavBar from "./components/NavBar";
 import ClickSpark from "./components/clickSpark";
-
+import Footer from "./components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +32,7 @@ export default function RootLayout({ children }) {
           <NavBar />
           {children}
         </ClickSpark>
+        <Footer />
       </body>
     </html>
   );

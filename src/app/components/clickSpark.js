@@ -4,9 +4,9 @@ import { useRef, useEffect, useCallback } from "react";
 
 export default function ClickSpark({
     sparkColor = "#3f538d",
-    sparkSize = 20,
-    sparkRadius = 15,
-    sparkCount = 7,
+    sparkSize = 40,
+    sparkRadius = 40,
+    sparkCount = 8,
     duration = 400,
     easing = "ease-out",
     extraScale = 1.0,
