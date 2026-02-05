@@ -20,36 +20,34 @@ export default function About() {
     return (
         <div className={styles.page}>
 
-        <main className={styles.main}>
-            <div >
-                
-            </div>
-            <div className={styles.intro}>
-            <img
-                src="/emma1.jpeg"
-                alt="Photo of Emma"
-                height="300px"
-                className={fadeInFirst ? styles["fade-in"] : ""}
-                style={{ transform: 'rotate(-10deg)', 
-                position: 'relative', 
-                left: '45rem',
-                }}
-            />
-            <img
-                src="/kenai.JPG"
-                alt="Photo of my dog Kenai"
-                height="300px"
-                className={fadeInSecond ? styles["fade-in"] : styles["hidden-until-fade"]}
-                style={{ transform: 'rotate(10deg)',
-                position: 'relative',
-                left: '25rem',
-                top: '-10rem',
-                }}
-            />
-            </div>
-        </main>
-
-        <Footer />
+            <main className={styles.main}>
+                <div >
+                    
+                </div>
+                <div className={styles.intro}>
+                <img
+                    src="/emma1.jpeg"
+                    alt="Photo of Emma"
+                    height="300px"
+                    className={fadeInFirst ? styles["fade-in"] : ""}
+                    style={{ transform: 'rotate(-10deg)', 
+                    position: 'relative', 
+                    left: '45rem',
+                    }}
+                />
+                <img
+                    src="/kenai.JPG"
+                    alt="Photo of my dog Kenai"
+                    height="300px"
+                    className={fadeInSecond ? styles["fade-in"] : styles["hidden-until-fade"]}
+                    style={{ transform: 'rotate(10deg)',
+                    position: 'relative',
+                    left: '25rem',
+                    top: '-10rem',
+                    }}
+                />
+                </div>
+            </main>
         </div>
     );
     }

@@ -15,7 +15,6 @@ export default function ContactMe() {
             </div>
         </main>
 
-        <Footer />
         </div>
     );
 }
