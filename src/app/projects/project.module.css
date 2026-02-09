@@ -18,7 +18,9 @@
     line-height: 1.2;
     color: var(--text-secondary);
     font-weight:400;
+    width: 80vw;
     margin-top: -40;
+    margin-left: 2rem;
 }
 
 .grid {

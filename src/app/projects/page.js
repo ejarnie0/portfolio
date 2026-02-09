@@ -13,60 +13,50 @@ const PROJECTS = [
         title: "Got It",
         subtitle: "Website",
         liveUrl: "https://got-it-phi.vercel.app/",
-        image: "/projects/gotit.png", // put your images in /public/projects/
-        alt: "Got It logo",
+        image: "/projects/gotIt/homepage.png", // put your images in /public/projects/
+        alt: "Got It homepage",
         description:
-        "A short paragraph about what this project is, what you built, and what you’re proud of. Mention tools/skills, goals, and one standout feature.",
+        "Supporting neurodiverse Electrical Apprentices with an approachable study tool by combining clean UI, guided study sessions, and trustworthy AI sandboxed with the user's own academic material",
     },
     {
         id: "p2",
         slug: "daybreak",
         title: "DayBreak",
         subtitle: "Web Browser Game",
-        image: "/projects/daybreak.png",
-        alt: "DayBreak game screenshot",
+        image: "/projects/daybreak/splashScreen.jpg",
+        alt: "DayBreak game splashScreen",
         description:
-        "Explain the concept, your role, and what the player does. Add any technical highlights (state management, animation, assets, etc.).",
+        "A fast-paced, story-driven multiplayer game where players can make meaningful and strategic decisions that lead to exciting, balanced outcomes, keeping them coming back again and again",
     },
     {
         id: "p3",
         slug: "sailing-brochure",
         title: "Sailing Brochure",
         subtitle: "InDesign & Photoshop",
-        image: "/projects/sailing.png",
-        alt: "Sailing brochure preview",
+        image: "/projects/sailingBrochure/sailingBrochure2.jpg",
+        alt: "Sailing Brochure preview",
         description:
-        "Talk about design goals, typographic/layout decisions, and how you approached the visual system. Mention constraints and outcomes.",
+        "A travel brochure ",
     },
     {
         id: "p4",
         slug: "skiing-posters",
         title: "Skiing Posters",
         subtitle: "Illustrator & Photoshop",
-        image: "/projects/skiing.png",
-        alt: "Skiing poster preview",
+        image: "/projects/skiingPosters/skiingPosterSnip.jpg",
+        alt: "Skiing Poster preview",
         description:
-        "Describe the poster series, the style direction, and your workflow. What did you explore? What did you learn?",
+        "Posters designed for a ski resort named Howling Heights. Made with a vintage poster design in mind using images and graphic illustrations.",
     },
     {
         id: "p5",
         slug: "realism-drawing",
         title: "Realism Drawing",
         subtitle: "Photoshop",
-        image: "/projects/realism.png",
+        image: "/projects/realisticPhoto/realisticPhotoSnip.png",
         alt: "Realism drawing preview",
         description:
-        "Describe the technique/process and what makes it special. You can also mention any reference study, shading work, or iterations.",
-    },
-    {
-        id: "p6",
-        slug: "deer-video",
-        title: "A Doe In a Field",
-        subtitle: "After Effects",
-        image: "/projects/project6.png",
-        alt: "Project six preview",
-        description:
-        "Maybe delete this one.",
+        "Realistic drawing using Photoshop to recreate an image of a model.",
     },
 ];
 
@@ -75,8 +65,7 @@ export default function ProjectsPage() {
         <main className={styles.page}>
         <header className={styles.header}>
             <h2 className={styles.subtitle}>
-            A few things I've designed and built. Click into any project later if you want
-            to add detail pages.
+            A few things I've designed and drawn! Click 'Go to Project' to see my design process and images from the project!
             </h2>
         </header>
 
@@ -90,7 +79,6 @@ export default function ProjectsPage() {
                 className={`${styles.card} ${flipped ? styles.cardFlipped : ""}`}
                 >
                 <div className={styles.media}>
-                    {/* If you don’t have images yet, keep the file path and add later */}
                     <Image
                     src={p.image}
                     alt={p.alt}
