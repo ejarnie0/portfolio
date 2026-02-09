@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
         <ClickSpark sparkSize={20} sparkColor="#3f538d" sparkCount={7}>
-          <RouteLoader />
+          {/* <RouteLoader /> */}
           <NavBar />
           {children}
         </ClickSpark>

@@ -8,8 +8,8 @@ export default function ProjectLayout({
     heroAlt = "",
     overviewTitle = "Overview",
     overview,
-    sections = [], // [{ tag, title, body, image, alt, flip }]
-    gallery = [], // optional array of image urls for "images of final project"
+    sections = [],
+    gallery = [],
 }) {
     return (
         <main className={styles.page}>
@@ -21,7 +21,7 @@ export default function ProjectLayout({
             </div>
         </div>
 
-        {/* hero: text left, image right */}
+        {/* text left, image right */}
         <section className={styles.hero}>
             <div className={styles.paper}>
             <h2 className={styles.sectionTitle}>{overviewTitle}</h2>
@@ -40,7 +40,7 @@ export default function ProjectLayout({
             </div>
         </section>
 
-        {/* “images of final project” optional */}
+        {/* “images of final project” */}
         {gallery.length > 0 && (
             <section className={styles.gallery}>
             <h2 className={styles.galleryTitle}>Images of Final Project</h2>
@@ -54,7 +54,7 @@ export default function ProjectLayout({
             </section>
         )}
 
-        {/* alternating sections like your sketch */}
+        {/* alternating sections */}
         {sections.map((s, i) => (
             <section
             key={`${s.title}-${i}`}

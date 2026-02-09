@@ -3,6 +3,7 @@ export const PROJECTS = {
         title: "Got It",
         subtitle: "Website",
         heroImage: "/projects/gotit.png",
+        liveUrl: "https://got-it-phi.vercel.app/",
         heroAlt: "Got It preview",
         overviewTitle: "Support neurodiverse Level 1 electrical apprentices with an approachable study tool by combining clean UI, guided study sessions, and trustworthy AI sandboxed using their own academic material",
         overview:
@@ -14,9 +15,8 @@ export const PROJECTS = {
         `GotIt is a tool to support Level 1 electrical apprentices in British Columbia. The tailor-made AI parses through the overwhelming volume of dense, technical learning material to be consumed by users in a short timeframe, making it easier to read and digest.`,
         ],
         gallery: [
-        // add/remove images any time
-        // "/projects/gotit_1.png",
-        // "/projects/gotit_2.png",
+        "/projects/gotIt/homepage.png",
+        "/projects/gotIt/dashboard.png"
         ],
         sections: [
         {
@@ -29,7 +29,7 @@ export const PROJECTS = {
             `We achieved this by combining a clean UI with guided study flow, we utilized our AI-assisted tools to turn dense content into manageable learning material. GotIt’s features provide simplification and summarization to reduce complexity of content, readability controls like font size and letter spacing to support accessibility, as well as a mind map that helps users visualize and connect concepts rather than reading the same wall of text multiple times.`,
             ],
             image: "/projects/gotit_detail.png",
-            alt: "replaceMe",
+            alt: "Replace Meeee",
             flip: false,
         },
         {
@@ -198,35 +198,6 @@ export const PROJECTS = {
             body: "Explain what improved and what you’d do next time.",
             image: "/projects/realism_process.png",
             alt: "Drawing process",
-            flip: true,
-        },
-        ],
-    },
-
-    "deer-video": {
-        title: "A Doe In a Field",
-        subtitle: "After Effects",
-        heroImage: "/projects/project6.png",
-        heroAlt: "Video preview",
-        overviewTitle: "Overview",
-        overview:
-        "Describe the animation concept and what tools/effects you used.",
-        gallery: [],
-        sections: [
-        {
-            tag: "Motion",
-            title: "Animation Choices",
-            body: "Talk about timing, easing, camera movement, and polish.",
-            image: "/projects/deer_detail.png",
-            alt: "Animation still",
-            flip: false,
-        },
-        {
-            tag: "Edit",
-            title: "Post & Effects",
-            body: "Describe effects, compositing, color, and finishing steps.",
-            image: "/projects/deer_process.png",
-            alt: "Effects detail",
             flip: true,
         },
         ],

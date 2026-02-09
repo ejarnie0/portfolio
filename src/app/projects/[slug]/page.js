@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-
 import { PROJECTS } from "../projectData";
 import ProjectTemplate from "../components/projectTemplate";
 
@@ -8,13 +7,17 @@ export function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
-    const project = PROJECTS[params.slug];
-    if (!project) return { title: "Project Not Found" };
-    return { title: `${project.title} | Emma Jennings` };
+    return (async () => {
+        const { slug } = await params;
+        const project = PROJECTS[slug];
+        return { title: project ? `${project.title} | Emma Jennings` : "Project Not Found" };
+    })();
 }
 
-export default function ProjectPage({ params }) {
-    const project = PROJECTS[params.slug];
+export default async function ProjectPage({ params }) {
+    const { slug } = await params;
+
+    const project = PROJECTS[slug];
     if (!project) notFound();
 
     return <ProjectTemplate project={project} />;

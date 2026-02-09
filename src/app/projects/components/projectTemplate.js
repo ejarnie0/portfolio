@@ -1,22 +1,41 @@
 import Image from "next/image";
 import styles from "./projectTemplate.module.css";
 
-export default function ProjectTemplate({ project }) {
+function renderParagraphs(value, className) {
+    if (!value) return null;
+
+    if (Array.isArray(value)) {
+        return value.map((text, idx) => (
+        <p key={idx} className={className}>
+            {text}
+        </p>
+        ));
+    }
+
+    return <p className={className}>{value}</p>;
+    }
+
+    export default function ProjectTemplate({ project }) {
     return (
         <main className={styles.page}>
         {/* subtitle paper */}
         <div className={styles.topRow}>
             <div className={styles.subtitlePaper}>
             <h1 className={styles.h1}>{project.title}</h1>
-            {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
+            {project.subtitle && (
+                <p className={styles.subtitle}>{project.subtitle}</p>
+            )}
             </div>
         </div>
 
         {/* hero */}
         <section className={styles.hero}>
             <div className={styles.paper}>
-            <h2 className={styles.sectionTitle}>{project.overviewTitle ?? "Overview"}</h2>
-            <p className={styles.body}>{project.overview}</p>
+            <h2 className={styles.sectionTitle}>
+                {project.overviewTitle ?? "Overview"}
+            </h2>
+
+            {renderParagraphs(project.overview, styles.body)}
             </div>
 
             <div className={styles.media}>
@@ -38,7 +57,13 @@ export default function ProjectTemplate({ project }) {
             <div className={styles.galleryGrid}>
                 {project.gallery.map((src, i) => (
                 <div key={src + i} className={styles.galleryItem}>
-                    <Image src={src} alt="" fill className={styles.image} sizes="300px" />
+                    <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className={styles.image}
+                    sizes="300px"
+                    />
                 </div>
                 ))}
             </div>
@@ -64,7 +89,8 @@ export default function ProjectTemplate({ project }) {
             <div className={styles.paper}>
                 {s.tag && <div className={styles.tag}>{s.tag}</div>}
                 <h2 className={styles.sectionTitle}>{s.title}</h2>
-                <p className={styles.body}>{s.body}</p>
+
+                {renderParagraphs(s.body, styles.body)}
             </div>
             </section>
         ))}
