@@ -50,25 +50,6 @@ function renderParagraphs(value, className) {
             </div>
         </section>
 
-        {/* optional gallery */}
-        {project.gallery?.length > 0 && (
-            <section className={styles.gallery}>
-            <h2 className={styles.galleryTitle}>Images of Final Project</h2>
-            <div className={styles.galleryGrid}>
-                {project.gallery.map((src, i) => (
-                <div key={src + i} className={styles.galleryItem}>
-                    <Image
-                    src={src}
-                    alt=""
-                    fill
-                    className={styles.image}
-                    sizes="300px"
-                    />
-                </div>
-                ))}
-            </div>
-            </section>
-        )}
 
         {/* sections */}
         {project.sections?.map((s, i) => (
@@ -94,6 +75,26 @@ function renderParagraphs(value, className) {
             </div>
             </section>
         ))}
+
+        {/* optional gallery */}
+        {project.gallery?.length > 0 && (
+            <section className={styles.gallery}>
+            <h2 className={styles.galleryTitle}>Images of Final Project</h2>
+            <div className={styles.galleryGrid}>
+                {project.gallery.map((src, i) => (
+                <div key={src + i} className={styles.galleryItem}>
+                    <Image
+                    src={src}
+                    alt=""
+                    fill
+                    className={styles.image}
+                    sizes="300px"
+                    />
+                </div>
+                ))}
+            </div>
+            </section>
+        )}
         </main>
     );
 }

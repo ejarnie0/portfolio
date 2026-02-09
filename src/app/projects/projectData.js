@@ -2,7 +2,7 @@ export const PROJECTS = {
     "got-it": {
         title: "Got It",
         subtitle: "Website",
-        heroImage: "/projects/gotit.png",
+        heroImage: "/projects/gotIt/homepage.png",
         liveUrl: "https://got-it-phi.vercel.app/",
         heroAlt: "Got It preview",
         overviewTitle: "Support neurodiverse Level 1 electrical apprentices with an approachable study tool by combining clean UI, guided study sessions, and trustworthy AI sandboxed using their own academic material",
@@ -16,11 +16,16 @@ export const PROJECTS = {
         ],
         gallery: [
         "/projects/gotIt/homepage.png",
-        "/projects/gotIt/dashboard.png"
+        "/projects/gotIt/dashboard.png",
+        "/projects/gotIt/AIGeneration.png",
+        "/projects/gotIt/mindMap.png",
+        "/projects/gotIt/pdfView.png",
+        "/projects/gotIt/studyGuide.png",
+        "/projects/gotIt/signUp.png",
+        "/projects/gotIt/pomodoroTimer.png",
         ],
         sections: [
         {
-            tag: "Challenge1",
             title: "Keeping the UI simple and approachable so that people don’t have to waste time trying to figure out complicated software",
             body:
             [
@@ -28,12 +33,11 @@ export const PROJECTS = {
             `We wanted the website to be visually interesting, to draw people in and intuitively funnel them exactly where they wanted to go. We didn’t just want to be nice to look at, we wanted to take down learning barriers and help people by making something they looked forward to using.`,
             `We achieved this by combining a clean UI with guided study flow, we utilized our AI-assisted tools to turn dense content into manageable learning material. GotIt’s features provide simplification and summarization to reduce complexity of content, readability controls like font size and letter spacing to support accessibility, as well as a mind map that helps users visualize and connect concepts rather than reading the same wall of text multiple times.`,
             ],
-            image: "/projects/gotit_detail.png",
-            alt: "Replace Meeee",
+            image: "/projects/gotIt/dashboard.png",
+            alt: "Got It Dashboard",
             flip: false,
         },
         {
-            tag: "Challenge2",
             title: `Ensuring the AI-generated output was accurate and trustworthy, without "hallucinations", or making things up. Cutting out the frustration and, in the context of the trades, dangerous consequences`,
             body:
             [
@@ -42,12 +46,11 @@ export const PROJECTS = {
             `To keep the AI-generated output as accurate to the source material as possible, we decided to sandbox the AI. I learned to use IBM’s WatsonX, trained our own AI, created specific AI prompting, and supplied it with its knowledge and database. Then, using a simple API call, we could send the trained AI a PDF, it would parse through it, then reply with the generated output.`,
             `GotIt also provides a split view of all AI output beside the source material to keep original context visible while viewing simplified material. This was to help ensure that users could trust where the content was coming from, and could look to the original materials if they needed to check where the AI was finding its information.`,
             ],
-            image: "/projects/gotit_process.png",
+            image: "/projects/gotIt/styleguide.png",
             alt: "Got It process",
             flip: true,
         },
         {
-            tag: "Challenge3",
             title: "Matching real studying habits. Yes, we wanted the UI to be usable and easy to look at, but we wanted to actually help people study. So we had to research how people actually studied",
             body:
             [
@@ -55,7 +58,7 @@ export const PROJECTS = {
             `We researched studying tools and tips directly aimed at neurodiverse learners, spoke with other neurodiverse people and how they liked to study. We also looked into different studying structures and what people’s routines were when they were studying.`,
             `This information helped us to decide what tools we wanted to include, such as the pomodoro  timer, the AI Simplification, Summarization, and Mind Maps. We even included an AI study guide that could help someone to plan out how to fit studying into their week.`,
             ],
-            image: "/projects/gotit_process.png",
+            image: "/projects/gotIt/studyGuide.png",
             alt: "Got It process",
             flip: true,
         },
@@ -77,7 +80,6 @@ export const PROJECTS = {
         gallery: [],
         sections: [
         {
-            tag: "Challenge1",
             title: "Designing an intuitive and user-friendly UI that was easy for players to learn quickly while staying invested in the gameplay",
             body: 
             [
@@ -90,7 +92,6 @@ export const PROJECTS = {
             flip: false,
         },
         {
-            tag: "Challenge2",
             title: "Incorporating high quality sound design into Daybreak to immerse the player in the suspenseful and eerie atmosphere",
             body: 
             [
@@ -102,7 +103,6 @@ export const PROJECTS = {
             flip: true,
         },
         {
-            tag: "Challenge2",
             title: "Illustrated a consistent visual design for characters, enemies, game assets, and menus to support clear gameplay communication while reinforcing the game’s dark-fantasy tone",
             body: 
             [
@@ -127,7 +127,6 @@ export const PROJECTS = {
         gallery: [],
         sections: [
         {
-            tag: "Design",
             title: "Layout & Visual System",
             body: "Talk about typography, hierarchy, grid, and style decisions.",
             image: "/projects/sailing_detail.png",
@@ -135,7 +134,6 @@ export const PROJECTS = {
             flip: false,
         },
         {
-            tag: "Outcome",
             title: "Final Result",
             body: "Explain what you delivered and what you’re proud of.",
             image: "/projects/sailing_process.png",
@@ -156,7 +154,6 @@ export const PROJECTS = {
         gallery: [],
         sections: [
         {
-            tag: "Style",
             title: "Visual Direction",
             body: "Describe the style: color palette, shapes, composition, mood.",
             image: "/projects/skiing_detail.png",
@@ -164,7 +161,6 @@ export const PROJECTS = {
             flip: false,
         },
         {
-            tag: "Process",
             title: "Workflow",
             body: "Explain your workflow and what tools you used for what steps.",
             image: "/projects/skiing_process.png",
@@ -185,7 +181,6 @@ export const PROJECTS = {
         gallery: [],
         sections: [
         {
-            tag: "Technique",
             title: "How I Shaded & Rendered",
             body: "Talk about brushwork, lighting, texture, and detail choices.",
             image: "/projects/realism_detail.png",
@@ -193,7 +188,6 @@ export const PROJECTS = {
             flip: false,
         },
         {
-            tag: "Learning",
             title: "What I Learned",
             body: "Explain what improved and what you’d do next time.",
             image: "/projects/realism_process.png",
