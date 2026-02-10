@@ -55,10 +55,12 @@
   margin: 0.75rem 1rem 1rem 1rem;
 }
 
+
 .title {
-  display: flex;
-  flex-direction: column;
-  columns: 1;
+  color: var(--text-darkblue);
+  font-weight: 700;
+  font-size: 3rem;
+  margin: 0.8rem;
 }
 
 .nav {
@@ -98,22 +100,22 @@
 .h2 {
   color: var(--text-darkblue);
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 350;
   margin-bottom: 1rem;
   line-height: 2rem;
+}
+
+.h3 {
+  color: var(--text-darkblue);
+  font-size: 2rem;
+  font-weight: 400rem;
+  margin: 0 0 0 9rem;
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 1rem;
-}
-
-.title {
-  color: #5C82B9;
-  font-weight: 700;
-  font-size: 3rem;
-  margin: 0.8rem;
 }
 
 /* Logo Wiggle Animation */
@@ -230,6 +232,10 @@
   .stickersMedium {
     visibility: hidden;
   }
+
+  .h3 {
+  margin: 0 0 0 9.5rem;
+}
 }
 
 @media screen and (max-width: 1125px) {
@@ -239,6 +245,10 @@
   .header {
     visibility: hidden;
   }
+
+  .h3 {
+  margin: 0 5rem 0 5rem;
+}
 }
 
 .phoneProjects {

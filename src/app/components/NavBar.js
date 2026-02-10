@@ -8,8 +8,7 @@ import CardNav from "./cardNav";
 const NAV_ITEMS = [
     { href: "/", label: "Home", title: "Hi there, I'm Emma!" },
     { href: "/projects", label: "Projects", title: "Projects" },
-    { href: "/about", label: "About", title: "About" },
-    { href: "/contactMe", label: "Contact Me", title: "Contact Me" },
+    { href: "/about", label: "About Me", title: "About Me" },
 ];
 
 // Pick the “best match” for the current pathname (supports nested routes later)
@@ -32,8 +31,6 @@ function getActiveItem(pathname) {
 export default function NavBar() {
     const pathname = usePathname();
     const activeItem = getActiveItem(pathname);
-
-    // Change this default title to whatever you want on the home page (/)
     const pageTitle = activeItem?.title ?? "Hi there, I'm Emma!";
 
     return (
@@ -42,9 +39,8 @@ export default function NavBar() {
                 logoSrc="/emma_logo.png"
                 items={[
                     { label: "Home", href: "/" },
-                    { label: "Projects", href: "/projects" }, // Get rid of this maybe??
+                    { label: "Projects", href: "/projects" },
                     { label: "About", href: "/about" },
-                    { label: "Contact", href: "/contactMe" },
                 ]}
             />
             <div className={styles.header}>

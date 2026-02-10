@@ -57,7 +57,7 @@ const initialNodes = [
       subtitle: `InDesign & Photoshop`,
       bgUrl: "/paper3.png",
       href: "/projects/sailing-brochure",
-      iconUrl: "/projects/sailingLogo.svg",
+      iconUrl: "/projects/2X/sailingLogo.png",
     },
   },
   {
@@ -101,14 +101,14 @@ const initialNodes = [
       iconUrl: "/blue_x.png",
     },
   },
-  {
-    id: "p8",
-    type: "icon",
-    position: { x: 700, y: 300 },
-    data: {
-      iconUrl: "/star2.png",
-    },
-  },
+  // {
+  //   id: "p8",
+  //   type: "icon",
+  //   position: { x: 700, y: 300 },
+  //   data: {
+  //     iconUrl: "/star2.png",
+  //   },
+  // },
   {
     id: "p9",
     type: "icon",
@@ -185,6 +185,9 @@ useEffect(() => {
 
   return (
     <div className={styles.page}>
+          <h3 className={styles.h3}>
+            I'm a Web Developer and Graphic Designer
+          </h3>
       <main className={styles.main}>
         <div className={styles.description}>
           <h2 className={styles.h2}>
@@ -200,6 +203,7 @@ useEffect(() => {
             it a part of ourselves.
           </p>
         </div>
+          
         <div className={styles.stickersLarge}>
           <div 
             className={styles.stickerWrap}
