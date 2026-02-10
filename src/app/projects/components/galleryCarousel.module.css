@@ -17,10 +17,9 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
-    /* hide scrollbar */
     scrollbar-width: none;
 }
+
 .track::-webkit-scrollbar {
     display: none;
 }
@@ -28,7 +27,7 @@
 .slide {
     scroll-snap-align: start;
     position: relative;
-    height: 420px;
+    height: 500px;
     background: var(--text-primary);
 }
 
@@ -42,8 +41,6 @@
     background: var(--text-primary);
 }
 
-
-/* arrows */
 .arrowLeft,
 .arrowRight {
     position: absolute;
@@ -75,7 +72,6 @@
     cursor: default;
 }
 
-/* dots */
 .dots {
     display: flex;
     justify-content: center;
@@ -96,9 +92,19 @@
     background: rgba(63, 83, 141, 0.9);
 }
 
-/* mobile */
+/* Mobile screen size */
 @media (max-width: 900px) {
     .slide {
         height: 320px;
+    }
+}
+
+@media (max-width: 900px) {
+    .slide {
+        height: 360px;
+    }
+
+    .img {
+        padding: 10px;
     }
 }
