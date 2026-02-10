@@ -5,7 +5,7 @@ export const PROJECTS = {
         heroImage: "/projects/gotIt/homepage.png",
         liveUrl: "https://got-it-phi.vercel.app/",
         heroAlt: "Got It preview",
-        overviewTitle: "Support neurodiverse Level 1 electrical apprentices with an approachable study tool by combining clean UI, guided study sessions, and trustworthy AI sandboxed using their own academic material",
+        overviewTitle: "Made to support neurodiverse trades apprentices with an approachable study tool by combining clean UI, guided study sessions, and trustworthy AI sandboxed using the user's own academic material",
         overview:
         [
         `I was the co-product owner on a team of seven people and we were tasked with solving a problem that could help a minority group in the trades industry. My team was made up of neurodiverse individuals and we wanted to solve an issue that we could truly understand while simultaneously helping others much like us.`,
@@ -77,7 +77,17 @@ export const PROJECTS = {
         `My idea was picked and then the team ideated more about what we wanted the mechanics of the game to be. We did a lot of testing and found that the idea was a bit too complex for our timeline so we decided to keep the name and art-direction but change the mechanics of the game.`,
         `Our aim was to create a game loop where players make meaningful decisions with a combination of movement, timing, and tactical choices, while keeping the user experience threatening and surprising. We also wanted the game to have a cohesive art direction and UI design that communicates actions quickly during play.`,
         ],
-        gallery: [],
+        gallery: [
+            "/projects/daybreak/splashScreen.jpg",
+            "/projects/daybreak/dashboard.png",
+            "/projects/daybreak/wheelOfMisfortune.png",
+            "/projects/daybreak/placingTrap.png",
+            "/projects/daybreak/happyPath.jpg",
+            "/projects/daybreak/workingVersion1.png",
+            "/projects/daybreak/gameAssets2.jpg",
+            "/projects/daybreak/cardsCharacters.jpg",
+
+        ],
         sections: [
         {
             title: "Designing an intuitive and user-friendly UI that was easy for players to learn quickly while staying invested in the gameplay",
@@ -88,7 +98,7 @@ export const PROJECTS = {
             `All of this helped in creating Daybreak and making sure our game was well developed and fun to play for users of every playing level.`,
             ],
             image: "/projects/daybreak/dashboard.png",
-            alt: "DayBreak detail",
+            alt: "DayBreak dashboard",
             flip: false,
         },
         {
@@ -98,8 +108,8 @@ export const PROJECTS = {
             `I reached out to film students, musicians, as well as anyone who understood sound-design for tips on how I could record voice lines and sound effects for Daybreak. I learned about how to properly record and what sound-design applications I could use to edit them.`,
             `I got help from my group mates and reached out to friends to record the voice lines and the finished products ended up being high quality and immersive for players. The goal was achieved and it was fun to teach myself a new skill that could help me in the future to understand peoples' recording process. The process really showed me how much work goes into this type of work and how skilled people are in the music and sound industry.`,
             ],
-            image: "/projects/daybreak_process.png",
-            alt: "DayBreak process",
+            image: "/projects/daybreak/placingTrap.png",
+            alt: "DayBreak - work in progress of placing a trap in game",
             flip: true,
         },
         {
@@ -109,8 +119,8 @@ export const PROJECTS = {
             `I helped in hand illustrating the menus, game assets, and icons for Daybreak. One of our challenges was designing a UI that stays legible under pressure: everything needed to communicate available actions and consequences at a glance. We wanted the visual style to support gameplay readability, communicating to players their available actions, consequences, and other player states at a glance, all while fitting the game’s dark-fantasy tone.`,
             `Our solutions paired clear, structured mechanics with illustrated UI components designed for fast recognition. The gameplay uses card-driven actions and event effects to create frequent decision points and high replay value, while consistent presentation helps players anticipate what each option does.`,
             ],
-            image: "/projects/daybreak_process.png",
-            alt: "DayBreak process",
+            image: "/projects/daybreak/workingVersion1.png",
+            alt: "DayBreak - work in progress image of the dashboard",
             flip: true,
         },
         ],
@@ -121,29 +131,22 @@ export const PROJECTS = {
         subtitle: "InDesign & Photoshop",
         heroImage: "/projects/sailingBrochure/sailingBrochure2.jpg",
         heroAlt: "Sailing brochure preview",
-        overviewTitle: "Overview",
+        overviewTitle: "A sailing brochure designed to interest viewers in a sailing trip along the Dalmation Coast, in Croatia.",
         overview:
-        "Describe the design goal and audience. What did you want it to feel like?",
+        "The brochure is designed to show the viewer what they would experience and entice them to choose this trip. It is a high-end market so I went with a clean and simple layout, allowing the images space to breathe and entice the viewer.",
         gallery: [
+            "/projects/sailingBrochure/sailingBrochureCover.jpg",
             "/projects/sailingBrochure/sailingBrochure2.jpg",
             "/projects/sailingBrochure/sailingBrochure3.jpg",
             "/projects/sailingBrochure/sailingBrochure4.jpg",
-            "/projects/sailingBrochure/sailingBrochureCover.jpg",
         ],
         sections: [
         {
-            title: "Layout & Visual System",
-            body: "Talk about typography, hierarchy, grid, and style decisions.",
+            title: "The layout and visual system used to create a sophisticated style and feel",
+            body: "The visual style I chose is based on real magazines and brochures that I researched. Everything I chose to include, from the typefaces to the images, is specifically to push the high-end and expensive vibe that those planning a sailing vacation would come to expect. Combining the simple layout with distinct images and bold colour choices that stand out against the white background.",
             image: "/projects/sailingBrochure/sailingBrochure1.jpg",
             alt: "Brochure spread",
             flip: false,
-        },
-        {
-            title: "Final Result",
-            body: "Explain what you delivered and what you’re proud of.",
-            image: "/projects/sailingBrochure4.jpg",
-            alt: "Brochure detail",
-            flip: true,
         },
         ],
     },
@@ -151,45 +154,35 @@ export const PROJECTS = {
     "skiing-posters": {
         title: "Skiing Posters",
         subtitle: "Illustrator & Photoshop",
-        heroImage: "/projects/skiing.png",
+        heroImage: "/projects/skiingPosters/skiingPosterSnip.jpg",
         heroAlt: "Skiing posters preview",
-        overviewTitle: "Overview",
+        overviewTitle: "A series of posters designed with a vintage feel for a ski resort named Howling Heights.",
         overview:
-        "Describe the poster series concept and your creative direction.",
+        "I decided on the style and design after researching current and vintage skiing, ski resort, and other winter sports posters and advertisements. I thought it would be a fun challenge to try to replicate the vintage feel of old images using Adobe Photoshop, then combining those images with vectors and icons I made in Adobe Illustrator. The result is a sophisticated yet playful series of posters.",
         gallery: [
-            "/projects/skiingPosters/skiingPosterSnip.jpg",
             "/projects/skiingPosters/skiingPoster1.jpg",
             "/projects/skiingPosters/skiingPoster2.jpg",
             "/projects/skiingPosters/skiingPoster3.jpg",
         ],
-        sections: [
-        {
-            title: "Visual Direction",
-            body: "Describe the style: color palette, shapes, composition, mood.",
-            image: "/projects/skiingPosters/skiingPoster3.jpg",
-            alt: "Poster detail",
-            flip: false,
-        },
-        ],
     },
 
-    "realism-drawing": {
-        title: "Realism Drawing",
-        subtitle: "Photoshop",
-        heroImage: "/projects/realisticPhoto/realisticPhotoSnip.png",
-        heroAlt: "Realism drawing preview",
-        overviewTitle: "Overview",
-        overview:
-        "Describe what you drew, what references you used, and what technique you practiced.",
-        gallery: [],
-        sections: [
-        {
-            title: "How I Shaded & Rendered",
-            body: "Talk about brushwork, lighting, texture, and detail choices.",
-            image: "/projects/realism_detail.png",
-            alt: "Drawing detail",
-            flip: false,
-        },
-        ],
-    },
+    // "realism-drawing": {
+    //     title: "Realism Drawing",
+    //     subtitle: "Photoshop",
+    //     heroImage: "/projects/realisticPhoto/realisticPhotoSnip.png",
+    //     heroAlt: "Realism drawing preview",
+    //     overviewTitle: "Overview",
+    //     overview:
+    //     "Describe what you drew, what references you used, and what technique you practiced.",
+    //     gallery: [],
+    //     sections: [
+    //     {
+    //         title: "How I Shaded & Rendered",
+    //         body: "The challenge was to recreate a realistic image using Adobe Photoshop.",
+    //         image: "/projects/realism_detail.png",
+    //         alt: "Drawing detail",
+    //         flip: false,
+    //     },
+    //     ],
+    // },
 };
