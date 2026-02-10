@@ -1,0 +1,54 @@
+.node {
+    width: 400px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: flex-end;
+}
+
+/* label overlay at bottom */
+.label {
+    width: 100%;
+    padding: 0 0 0 50px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-darkblue);
+    align-content: center;
+}
+
+.subtitle {
+    color: var(--text-darkblue);
+    padding: 0 0 110px 50px;
+    font-size: 1rem;
+    line-height: 1.1;
+}
+
+.subtitle a {
+    color: inherit;            /* or a specific link color */
+    text-decoration: underline;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.subtitle a:hover {
+    opacity: 0.85;
+}
+
+
+/* Image CSS */
+.topRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+}
+
+.icon {
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+}

@@ -1,0 +1,189 @@
+.page {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.header {
+    max-width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.subtitle {
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: var(--text-secondary);
+    font-weight:400;
+    width: 80vw;
+    margin-top: -40;
+    margin-left: 2rem;
+}
+
+.subSubtitle {
+    font-size: 0.9rem;
+    line-height: 1;
+    color: var(--text-secondary);
+    font-weight: 450;
+    width: 80vw;
+    margin-left: 2rem;
+}
+
+.grid {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+/* Layout/spacing for each project */
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 18rem;
+    gap: 3rem;
+    align-items: stretch;
+
+    border-radius: 1rem;
+    padding: 1.25rem;
+}
+
+/* flip image/text every other card */
+.cardFlipped {
+    grid-template-columns: 1.2fr 1fr;
+}
+
+.cardFlipped .media {
+    order: 2;
+}
+
+.cardFlipped .content {
+    order: 1;
+}
+
+.media {
+    position: relative;
+    min-height: 320px;
+    min-width: 300px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.image {
+    object-fit: cover;
+}
+
+.content {
+    position: relative;
+    padding: 1.1rem 1.2rem 1.25rem;
+
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 10px 12px 0 -6px rgba(45, 88, 114, 0.35);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.55rem;
+}
+
+/* optional: little “torn” edge vibe */
+.content::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 1rem;
+    pointer-events: none;
+
+    /* subtle texture-ish effect */
+    background:
+        radial-gradient(circle at 8px 8px, rgba(0,0,0,0.04) 2px, transparent 3px) 0 0 / 22px 22px;
+    opacity: 0.25;
+    mix-blend-mode: multiply;
+}
+
+.kicker {
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+}
+
+.cardTitle {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: var(--text-darkblue);
+    font-weight: 800;
+}
+
+.description {
+    margin: 0.25rem 0 0.5rem;
+    color: var(--text-darkblue);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    font-weight: 400;
+    opacity: 0.95;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between; /* left + right */
+    gap: 1rem;
+    width: 100%;
+}
+
+.button,
+.buttonSecondary {
+    border: 2px solid rgba(45, 88, 114, 0.25);
+    border-radius: 0.85rem;
+    padding: 1rem 0.8rem;
+    font-weight: 800;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--text-darkblue);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonSecondary {
+    color: #7894ba;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.5rem 0.8rem;
+    background: transparent;
+}
+
+.buttonSecondary:hover {
+    pointer: grabber;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .page {
+        padding: 1.25rem;
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .card,
+    .cardFlipped {
+        grid-template-columns: 1fr;
+    }
+
+    .cardFlipped .media,
+    .cardFlipped .content {
+        order: unset;
+}
+
+.media {
+    min-height: 220px;
+}
+}
