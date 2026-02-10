@@ -68,7 +68,7 @@ export const PROJECTS = {
     daybreak: {
         title: "DayBreak",
         subtitle: "Web Browser Game",
-        heroImage: "/projects/daybreak.png",
+        heroImage: "/projects/daybreak/splashScreen.jpg",
         heroAlt: "DayBreak preview",
         overviewTitle: "A fast-paced, story-driven multiplayer game where players can make meaningful and strategic decisions that lead to exciting, balanced outcomes, keeping them coming back again and again",
         overview:
@@ -87,7 +87,7 @@ export const PROJECTS = {
             `I conducted surveys, researched about games and how users interact with different gaming platforms, whether it be in person board-games, web-browser games, mobile games, or downloaded games (eg: Steam, EA, Mojang Studios, etc). I conducted interviews with people who designed games and took notes about their process and how they lead user-testing specifically with games in mind.`,
             `All of this helped in creating Daybreak and making sure our game was well developed and fun to play for users of every playing level.`,
             ],
-            image: "/projects/daybreak_detail.png",
+            image: "/projects/daybreak/dashboard.png",
             alt: "DayBreak detail",
             flip: false,
         },
@@ -119,24 +119,29 @@ export const PROJECTS = {
     "sailing-brochure": {
         title: "Sailing Brochure",
         subtitle: "InDesign & Photoshop",
-        heroImage: "/projects/sailing.png",
+        heroImage: "/projects/sailingBrochure/sailingBrochure2.jpg",
         heroAlt: "Sailing brochure preview",
         overviewTitle: "Overview",
         overview:
         "Describe the design goal and audience. What did you want it to feel like?",
-        gallery: [],
+        gallery: [
+            "/projects/sailingBrochure/sailingBrochure2.jpg",
+            "/projects/sailingBrochure/sailingBrochure3.jpg",
+            "/projects/sailingBrochure/sailingBrochure4.jpg",
+            "/projects/sailingBrochure/sailingBrochureCover.jpg",
+        ],
         sections: [
         {
             title: "Layout & Visual System",
             body: "Talk about typography, hierarchy, grid, and style decisions.",
-            image: "/projects/sailing_detail.png",
+            image: "/projects/sailingBrochure/sailingBrochure1.jpg",
             alt: "Brochure spread",
             flip: false,
         },
         {
             title: "Final Result",
             body: "Explain what you delivered and what you’re proud of.",
-            image: "/projects/sailing_process.png",
+            image: "/projects/sailingBrochure4.jpg",
             alt: "Brochure detail",
             flip: true,
         },
@@ -151,21 +156,19 @@ export const PROJECTS = {
         overviewTitle: "Overview",
         overview:
         "Describe the poster series concept and your creative direction.",
-        gallery: [],
+        gallery: [
+            "/projects/skiingPosters/skiingPosterSnip.jpg",
+            "/projects/skiingPosters/skiingPoster1.jpg",
+            "/projects/skiingPosters/skiingPoster2.jpg",
+            "/projects/skiingPosters/skiingPoster3.jpg",
+        ],
         sections: [
         {
             title: "Visual Direction",
             body: "Describe the style: color palette, shapes, composition, mood.",
-            image: "/projects/skiing_detail.png",
+            image: "/projects/skiingPosters/skiingPoster3.jpg",
             alt: "Poster detail",
             flip: false,
-        },
-        {
-            title: "Workflow",
-            body: "Explain your workflow and what tools you used for what steps.",
-            image: "/projects/skiing_process.png",
-            alt: "Poster process",
-            flip: true,
         },
         ],
     },
@@ -173,7 +176,7 @@ export const PROJECTS = {
     "realism-drawing": {
         title: "Realism Drawing",
         subtitle: "Photoshop",
-        heroImage: "/projects/realism.png",
+        heroImage: "/projects/realisticPhoto/realisticPhotoSnip.png",
         heroAlt: "Realism drawing preview",
         overviewTitle: "Overview",
         overview:
@@ -186,13 +189,6 @@ export const PROJECTS = {
             image: "/projects/realism_detail.png",
             alt: "Drawing detail",
             flip: false,
-        },
-        {
-            title: "What I Learned",
-            body: "Explain what improved and what you’d do next time.",
-            image: "/projects/realism_process.png",
-            alt: "Drawing process",
-            flip: true,
         },
         ],
     },

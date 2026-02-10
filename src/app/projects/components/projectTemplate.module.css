@@ -6,97 +6,131 @@
   gap: 3rem;
 }
 
+/* Project name and Subtitle */
 .topRow {
   display: flex;
-  justify-content: center;
 }
 
 .subtitlePaper {
-  width: min(780px, 92vw);
+  width: min(12rem, 90vw);
   padding: 1.2rem 1.4rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.92);
-  border: 2px solid rgba(45, 88, 114, 0.12);
-  box-shadow: 10px 12px 0 -6px rgba(45, 88, 114, 0.35);
+  background: var(--text-primary);
+  box-shadow: 10px 12px 0 -6px rgba(23, 93, 137, 0.50);
 }
 
 .h1 {
   margin: 0;
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   line-height: 1.1;
   color: var(--text-darkblue);
 }
 
 .subtitle {
   margin: 0.6rem 0 0;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--text-darkblue);
   opacity: 0.9;
 }
 
-.hero,
-.split {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 2rem;
-  align-items: start;
+
+
+/* Hero Section */
+/* one shared wrapper for every wrap section */
+.wrapSection {
+  width: 80vw;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 
-.split {
-  grid-template-columns: 0.85fr 1.15fr; /* image left, paper right */
+.floatMedia {
+  position: relative;
+  width: min(520px, 48%);
+  aspect-ratio: 4 / 3;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: var(--text-primary);
+  border: 2px solid rgba(45, 88, 114, 0.18);
 }
 
-.flip {
-  grid-template-columns: 1.15fr 0.85fr; /* optional flip */
+.floatRight {
+  float: right;
+  margin: 0.25rem 0 1rem 1.5rem; /* space to left of image */
 }
+
+.floatLeft {
+  float: left;
+  margin: 0.25rem 1.5rem 1rem 0; /* space to right of image */
+}
+
+.paper::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Phone screen size CSS for the sections */
+@media (max-width: 900px) {
+  .page {
+    padding: 1.5rem 1.25rem 3rem;
+  }
+
+  .wrapSection {
+    width: 100%;
+    max-width: none;
+  }
+
+  .floatMedia {
+    float: none !important;
+    width: 100%;
+    margin: 0 0 1.2rem 0;
+    aspect-ratio: 16 / 9;
+  }
+
+  .media {
+    min-height: 240px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 
 .paper {
   position: relative;
   padding: 1.4rem 1.5rem;
   border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.92);
+  background: var(--text-primary);
   border: 2px solid rgba(45, 88, 114, 0.12);
-  box-shadow: 10px 12px 0 -6px rgba(45, 88, 114, 0.35);
-}
-
-.tag {
-  display: inline-block;
-  margin-bottom: 0.8rem;
-  padding: 0.35rem 0.6rem;
-  border-radius: 0.7rem;
-  background: rgba(197, 227, 255, 0.9);
-  border: 2px solid rgba(45, 88, 114, 0.18);
-  color: var(--text-darkblue);
-  font-weight: 800;
-  font-size: 0.95rem;
+  box-shadow: 10px 12px 0 -6px rgba(23, 93, 137, 0.50);
 }
 
 .sectionTitle {
-  margin: 0 0 0.6rem;
-  font-size: 1.6rem;
+  margin: 0.5rem 0 0.6rem;
+  font-size: 1.7rem;
+  font-weight: 700;
   color: var(--text-darkblue);
 }
 
 .body {
-  margin: 0;
+  margin: 1.2rem 0;
   font-size: 1.1rem;
   line-height: 1.7;
   color: var(--text-darkblue);
-  opacity: 0.95;
 }
 
 .media {
   position: relative;
   border-radius: 1rem;
   overflow: hidden;
-  min-height: 320px;
-  border: 2px solid rgba(45, 88, 114, 0.18);
-  box-shadow: 10px 12px 0 -7px rgba(45, 88, 114, 0.25);
-  background: rgba(255, 255, 255, 0.25);
+  min-height: 20rem;
+  background: var(--text-primary);
 }
 
 .image {
   object-fit: cover;
+  min-height: 20rem;
 }
 
 .galleryTitle {
@@ -107,8 +141,9 @@
 
 .galleryGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: 20rem;
+  gap: 1.2rem;
 }
 
 .galleryItem {

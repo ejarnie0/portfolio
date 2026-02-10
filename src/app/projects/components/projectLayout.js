@@ -34,7 +34,7 @@ export default function ProjectLayout({
                 alt={heroAlt}
                 fill
                 className={styles.image}
-                sizes="(max-width: 900px) 100vw, 50vw"
+                // sizes="(max-width: 900px) 100vw, 60vw"
                 priority
             />
             </div>
@@ -66,7 +66,7 @@ export default function ProjectLayout({
                 alt={s.alt ?? ""}
                 fill
                 className={styles.image}
-                sizes="(max-width: 900px) 100vw, 50vw"
+                sizes="(max-width: 900px) 100vw, 60vw"
                 />
             </div>
 
