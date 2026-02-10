@@ -32,8 +32,8 @@ const initialNodes = [
       label: "Got It",
       subtitle: "Website",
       bgUrl: "/paper1.png",
-      href: "/projects", // change url later!!
-      iconUrl: "/icons/gotit.png", // change url later!!
+      href: "/projects/got-it",
+      iconUrl: "/projects/gotItLogo.png",
     },
   },
   {
@@ -44,8 +44,8 @@ const initialNodes = [
       label: "DayBreak",
       subtitle: `Web-Browser Game`,
       bgUrl: "/paper2.png",
-      href: "/projects", // change url later!!
-      iconUrl: "/icons/gotit.png", // change url later!!
+      href: "/projects/daybreak",
+      iconUrl: "/projects/daybreakLogo.png",
     },
   },
   {
@@ -56,8 +56,8 @@ const initialNodes = [
       label: `Sailing Brochure`,
       subtitle: `InDesign & Photoshop`,
       bgUrl: "/paper3.png",
-      href: "/projects", // change url later!!
-      iconUrl: "/icons/gotit.png", // change url later!!
+      href: "/projects/sailing-brochure",
+      iconUrl: "/projects/sailingLogo.svg",
     },
   },
   {
@@ -68,22 +68,23 @@ const initialNodes = [
       label: `Skiing Posters`,
       subtitle: `Illustrator & Photoshop`,
       bgUrl: "/paper2.png",
-      href: "/projects", // change url later!!
-      iconUrl: "/icons/gotit.png", // change url later!!
+      href: "/projects/skiing-posters",
+      iconUrl: "/projects/skiingPosterLogo.png",
     },
   },
-{
-    id: "p5",
-    type: "project",
-    position: { x: 500, y: 300 },
-    data: {
-      label: `Realism Drawing`,
-      subtitle: `Photoshop`,
-      bgUrl: "/paper3.png",
-      href: "/projects", // change url later!!
-      iconUrl: "/icons/gotit.png", // change url later!!
-    },
-  },
+
+// {
+//     id: "p5",
+//     type: "project",
+//     position: { x: 500, y: 300 },
+//     data: {
+//       label: `Realism Drawing`,
+//       subtitle: `Photoshop`,
+//       bgUrl: "/paper3.png",
+//       href: "/projects", // change url later!!
+//       iconUrl: "/icons/gotit.png", // change url later!!
+//     },
+//   },
   {
     id: "p6",
     type: "icon",
