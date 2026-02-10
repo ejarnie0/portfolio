@@ -1,0 +1,104 @@
+.wrap {
+    width: 100%;
+}
+
+.viewport {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid rgba(45, 88, 114, 0.18);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.track {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    /* hide scrollbar */
+    scrollbar-width: none;
+}
+.track::-webkit-scrollbar {
+    display: none;
+}
+
+.slide {
+    scroll-snap-align: start;
+    position: relative;
+    height: 420px;
+    background: var(--text-primary);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center; 
+    display: block;
+    padding: .75rem;
+    background: var(--text-primary);
+}
+
+
+/* arrows */
+.arrowLeft,
+.arrowRight {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 2px solid rgba(45, 88, 114, 0.18);
+    background: rgba(255, 255, 255, 0.85);
+    color: var(--text-darkblue);
+    font-size: 28px;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+
+.arrowLeft {
+    left: 12px;
+}
+.arrowRight {
+    right: 12px;
+}
+
+.arrowLeft:disabled,
+.arrowRight:disabled {
+    opacity: 0.35;
+    cursor: default;
+}
+
+/* dots */
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    border: 2px solid rgba(45, 88, 114, 0.25);
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.dotActive {
+    background: rgba(63, 83, 141, 0.9);
+}
+
+/* mobile */
+@media (max-width: 900px) {
+    .slide {
+        height: 320px;
+    }
+}

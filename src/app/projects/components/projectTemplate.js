@@ -1,5 +1,7 @@
 import Image from "next/image";
 import styles from "./projectTemplate.module.css";
+import GalleryCarousel from "./galleryCarousel";
+
 
 function renderParagraphs(value, className) {
     if (!value) return null;
@@ -46,12 +48,14 @@ function renderParagraphs(value, className) {
     export default function ProjectTemplate({ project }) {
     return (
         <main className={styles.page}>
+
             <div className={styles.topRow}>
                 <div className={styles.subtitlePaper}>
                 <h1 className={styles.h1}>{project.title}</h1>
                 {project.subtitle && <p className={styles.subtitle}>{project.subtitle}</p>}
                 </div>
             </div>
+
 
             <WrapSection
                 title={project.overviewTitle ?? "Overview"}
@@ -61,6 +65,7 @@ function renderParagraphs(value, className) {
                 flipped={false}
                 priority
             />
+
 
             {/* sections (alternate left/right) */}
             {project.sections?.map((s, i) => (
@@ -75,19 +80,15 @@ function renderParagraphs(value, className) {
                 />
             ))}
 
+
             {/* gallery */}
             {project.gallery?.length > 0 && (
-                <section className={styles.gallery}>
+            <section className={styles.gallery}>
                 <h2 className={styles.galleryTitle}>Images of Final Project</h2>
-                <div className={styles.galleryGrid}>
-                    {project.gallery.map((src, i) => (
-                    <div key={src + i} className={styles.galleryItem}>
-                        <Image src={src} alt="" fill className={styles.image} sizes="700px" />
-                    </div>
-                    ))}
-                </div>
+                <GalleryCarousel images={project.gallery} altPrefix={`${project.title} image`} />
             </section>
             )}
+
         </main>
     );
 }
