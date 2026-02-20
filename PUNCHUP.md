@@ -1,8 +1,9 @@
 Punch Up!
-Overall Objective
+
+Overall Objective:
 Create a stand-alone portfolio piece
 
-Assignment Objective
+Assignment Objective:
 My objective is to create a party game that people can play with each other using a wifi connection, like a lan-party, or jackbox games type of game. 
 The idea is based off of an old boardgame that I used to play with my family that I thought would be interesting to have as a more accessible and newly 
 updated version as some of the questions are quite dated now.
@@ -21,3 +22,6 @@ things that I am unfamiliar with. I think this project is much more than just fr
 I’m nervous about learning how to connect devices to a single game, I’m unsure of how to set that up so I’m sure it will take some time for me to learn 
 how to do that. I am also unsure I will have enough time to complete everything. We only have one month and a bit left before we are supposed to be in our 
 practicum which makes me a bit nervous but I’m sure everything will work out ok, even if that means that I have to scale back my project a bit.
+
+Link to Figma mock-ups:
+https://www.figma.com/design/M9ESpnv7ZbypFu37umYi8N/Punch-Up--Mock-ups?node-id=0-1&t=kyHmYqr6XoO57wkM-1
