@@ -308,32 +308,3 @@
     color: var(--text-primary);
   }
 }
-
-@media (prefers-color-scheme: dark) {
-  .logo {
-    filter: invert();
-  }
-
-  .page {
-    --background: #000;
-    --foreground: #000;
-
-    --text-primary: #ededed;
-    --text-secondary: #999;
-
-    --button-primary-hover: #ccc;
-    --button-secondary-hover: #1a1a1a;
-    --button-secondary-border: #1a1a1a;
-  }
-    .intro h1,
-    .intro p,
-    .intro a,
-    .link {
-      color: #fff !important;
-      border-bottom: 2px solid #fff;
-    }
-    .link:hover {
-      background: #fff;
-      color: #000 !important;
-    }
-}
